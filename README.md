@@ -23,7 +23,15 @@ $ git clone https://github.com/sezzh/sf-grid.git
 
 ```
 
-### Download from Releases:
+### Download from Releases
+
+You can download from this link as well:
+
+```bash
+
+https://github.com/sezzh/sf-grid/releases
+
+```
 
 
 ## Use
