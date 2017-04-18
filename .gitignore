@@ -1,1 +1,4 @@
+!dist/
+dist/*.css
+
 node_modules/

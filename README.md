@@ -1,6 +1,5 @@
 # sf-grid
-simpleflex-grid it's a very light grid to build responsive sites on top of Flexbox properties :D
-
+simpleflex-grid it's a very light grid to build responsive sites on top of Flexbox properties :heart:
 
 ## Installation
 
@@ -35,7 +34,7 @@ $ git clone https://github.com/sezzh/sf-grid.git
 
 ##### Especial thanks
 ---
-This Grid was an idea reading those awesome articles :)
+This Grid was an idea reading those awesome articles :) :v:
 
 - https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 - https://css-tricks.com/dont-overthink-flexbox-grids/
