@@ -1,0 +1,283 @@
+@import './settings.styl'
+@import './mixins.styl'
+
+/* Grid system */
+
+// Grid options
+$gutter-size = sf-rem-calc($gutter-value)
+
+// Native global css variables!
+:root
+  --sf-gutter-size: $gutter-size
+
+// Base Grid system
+// flex it's a shortcut for: flex- grow, shrink, basis
+.sf-grid
+
+  // Grid default properties
+  display: flex
+  flex-flow: row wrap
+
+  // If you wanna use a grid without column drop you should use this option.
+  &--fluid
+    flex-flow: row nowrap
+
+  // Gutter for grid
+  &--gutter
+    margin: 0
+    margin-left: - $gutter-size
+    > .sf-grid__cell
+      padding: 0 0 0 $gutter-size
+
+  // Grid start items position
+  &--just-center
+    justify-content: center
+
+  &--just-start
+    justify-content: flex-start
+
+  &--just-end
+    justify-content: flex-end
+
+  // Grid align items options
+  &--items-center
+    align-items: center
+  &--items-top
+    align-items: flex-start
+  &--items-bottom
+    align-items: flex-end
+  &--items-stretch
+    align-items: stretch
+  &--items-baseline
+    align-items: baseline
+
+  // Grid cell configuration
+  // There are many different kind of cells they can be used all together.
+
+.sf-grid__cell
+
+  // Default properties for a cell grid
+  flex: 1 0 auto
+  // This kind of flex column doesn't drop
+  // Cols configuration
+  &--col-auto
+    flex: 9999 1 .00000001%
+    max-width: calc(100% - var(--sf-gutter-size))
+
+  &--col-no-grow
+    flex: 0 1 auto
+
+  &--col-12
+    flex: 1 0 calc(100% - var(--sf-gutter-size))
+    @media (min-width: sf-rem-calc($xs-size))
+      flex: 0 0 calc(100% - var(--sf-gutter-size))
+      max-width: 100%
+    &-fluid
+      flex: 1 0 calc(100% - var(--sf-gutter-size))
+      @media (min-width: sf-rem-calc($xs-size))
+        flex: 1 0 calc(100% - var(--sf-gutter-size))
+
+  &--col-11
+    flex: 1 0 calc(100% - var(--sf-gutter-size))
+    @media (min-width: sf-rem-calc($xs-size))
+      flex: 0 0 calc(91.66666667% - var(--sf-gutter-size))
+      max-width: 91.66666667%
+    &-fluid
+      flex: 1 0 calc(100% - var(--sf-gutter-size))
+      @media (min-width: sf-rem-calc($xs-size))
+        flex: 1 0 calc(91.66666667% - var(--sf-gutter-size))
+
+  &--col-10
+    flex: 1 0 calc(100% - var(--sf-gutter-size))
+    @media (min-width: sf-rem-calc($xs-size))
+      flex: 0 0 calc(83.33333333% - var(--sf-gutter-size))
+      max-width: 83.33333333%
+    &-fluid
+      flex: 1 0 calc(100% - var(--sf-gutter-size))
+      @media (min-width: sf-rem-calc($xs-size))
+        flex: 1 0 calc(83.33333333% - var(--sf-gutter-size))
+
+  &--col-9
+    flex: 1 0 calc(100% - var(--sf-gutter-size))
+    @media (min-width: sf-rem-calc($xs-size))
+      flex: 0 0 calc(75% - var(--sf-gutter-size))
+      max-width: 75%
+    &-fluid
+      flex: 1 0 calc(100% - var(--sf-gutter-size))
+      @media (min-width: sf-rem-calc($xs-size))
+        flex: 1 0 calc(75% - var(--sf-gutter-size))
+
+  &--col-8
+    flex: 1 0 calc(100% - var(--sf-gutter-size))
+    @media (min-width: sf-rem-calc($xs-size))
+      flex: 0 0 calc(66.66666667% - var(--sf-gutter-size))
+      max-width: 66.66666667%
+    &-fluid
+      flex: 1 0 calc(100% - var(--sf-gutter-size))
+      @media (min-width: sf-rem-calc($xs-size))
+        flex: 1 0 calc(66.66666667% - var(--sf-gutter-size))
+
+  &--col-7
+    flex: 1 0 calc(100% - var(--sf-gutter-size))
+    @media (min-width: sf-rem-calc($xs-size))
+      flex: 0 0 calc(58.33333333% - var(--sf-gutter-size))
+      max-width: 58.33333333%
+    &-fluid
+      flex: 1 0 calc(100% - var(--sf-gutter-size))
+      @media (min-width: sf-rem-calc($xs-size))
+        flex: 1 0 calc(58.33333333% - var(--sf-gutter-size))
+
+  &--col-6
+    flex: 1 0 calc(100% - var(--sf-gutter-size))
+    @media (min-width: sf-rem-calc($xs-size))
+      flex: 0 0 calc(50% - var(--sf-gutter-size))
+      max-width: 50%
+    &-fluid
+      flex: 1 0 calc(100% - var(--sf-gutter-size))
+      @media (min-width: sf-rem-calc($xs-size))
+        flex: 1 0 calc(50% - var(--sf-gutter-size))
+
+  &--col-5
+    flex: 1 0 calc(100% - var(--sf-gutter-size))
+    @media (min-width: sf-rem-calc($xs-size))
+      flex: 0 0 calc(41.66666667% - var(--sf-gutter-size))
+      max-width: 41.66666667%
+    &-fluid
+      flex: 1 0 calc(100% - var(--sf-gutter-size))
+      @media (min-width: sf-rem-calc($xs-size))
+        flex: 1 0 calc(41.66666667% - var(--sf-gutter-size))
+
+  &--col-4
+    flex: 1 0 calc(100% - var(--sf-gutter-size))
+    @media (min-width: sf-rem-calc($xs-size))
+      flex: 0 0 calc(33.33333333% - var(--sf-gutter-size))
+      max-width: 33.33333333%
+    &-fluid
+      flex: 1 0 calc(100% - var(--sf-gutter-size))
+      @media (min-width: sf-rem-calc($xs-size))
+        flex: 1 0 calc(33.33333333% - var(--sf-gutter-size))
+
+  &--col-3
+    flex: 1 0 calc(100% - var(--sf-gutter-size))
+    @media (min-width: sf-rem-calc($xs-size))
+      flex: 0 0 calc(25% - var(--sf-gutter-size))
+      max-width: 25%
+    &-fluid
+      flex: 1 0 calc(100% - var(--sf-gutter-size))
+      @media (min-width: sf-rem-calc($xs-size))
+        flex: 1 0 calc(25% - var(--sf-gutter-size))
+
+  &--col-2
+    flex: 1 0 calc(100% - var(--sf-gutter-size))
+    @media (min-width: sf-rem-calc($xs-size))
+      flex: 0 0 calc(16.66666667% - var(--sf-gutter-size))
+      max-width: 16.66666667%
+    &-fluid
+      flex: 1 0 calc(100% - var(--sf-gutter-size))
+      @media (min-width: sf-rem-calc($xs-size))
+        flex: 1 0 calc(16.66666667% - var(--sf-gutter-size))
+
+  &--col-1
+    flex: 1 0 calc(100% - var(--sf-gutter-size))
+    @media (min-width: sf-rem-calc($xs-size))
+      flex: 0 0 calc(8.33333333% - var(--sf-gutter-size))
+      max-width: 8.33333333%
+    &-fluid
+      flex: 1 0 calc(100% - var(--sf-gutter-size))
+      @media (min-width: sf-rem-calc($xs-size))
+        flex: 1 0 calc(8.33333333% - var(--sf-gutter-size))
+
+
+// Offset configuration.
+// Offset is used to move a col value betweens columns you can choose  to add
+// Offset from the left or right size of column.
+//
+.sf-offset
+  &-11
+    margin-left: 0
+    @media (min-width: sf-rem-calc($xs-size))
+      margin-left: 91.66666667%
+    &-right
+      margin-right: 0
+      @media (min-width: sf-rem-calc($xs-size))
+        margin-right: 91.66666667%
+  &-10
+    margin-left: 0
+    @media (min-width: sf-rem-calc($xs-size))
+      margin-left: 66.66666667%
+    &-right
+      margin-right: 0
+      @media (min-width: sf-rem-calc($xs-size))
+        margin-right: 66.66666667%
+  &-9
+    margin-left: 0
+    @media (min-width: sf-rem-calc($xs-size))
+      margin-left: 75%
+    &-right
+      margin-right: 0
+      @media (min-width: sf-rem-calc($xs-size))
+        margin-right: 75%
+  &-8
+    margin-left: 0
+    @media (min-width: sf-rem-calc($xs-size))
+      margin-left: 66.66666667%
+    &-right
+      margin-right: 0
+      @media (min-width: sf-rem-calc($xs-size))
+        margin-right: 66.66666667%
+  &-7
+    margin-left: 0
+    @media (min-width: sf-rem-calc($xs-size))
+      margin-left: 58.33333333%
+    &-right
+      margin-right: 0
+      @media (min-width: sf-rem-calc($xs-size))
+        margin-right: 58.33333333%
+  &-6
+    margin-left: 0
+    @media (min-width: sf-rem-calc($xs-size))
+      margin-left: 50%
+    &-right
+      margin-right: 0
+      @media (min-width: sf-rem-calc($xs-size))
+        margin-right: 50%
+  &-5
+    margin-left: 0
+    @media (min-width: sf-rem-calc($xs-size))
+      margin-left: 41.66666667%
+    &-right
+      margin-right: 0
+      @media (min-width: sf-rem-calc($xs-size))
+        margin-right: 41.66666667%
+  &-4
+    margin-left: 0
+    @media (min-width: sf-rem-calc($xs-size))
+      margin-left: 33.33333333%
+    &-right
+      margin-right: 0
+      @media (min-width: sf-rem-calc($xs-size))
+        margin-right: 33.33333333%
+  &-3
+    margin-left: 0
+    @media (min-width: sf-rem-calc($xs-size))
+      margin-left: 25%
+    &-right
+      margin-right: 0
+      @media (min-width: sf-rem-calc($xs-size))
+        margin-right: 25%
+  &-2
+    margin-left: 0
+    @media (min-width: sf-rem-calc($xs-size))
+      margin-left: 16.66666667%
+    &-right
+      margin-right: 0
+      @media (min-width: sf-rem-calc($xs-size))
+        margin-right: 16.66666667%
+  &-1
+    margin-left: 0
+    @media (min-width: sf-rem-calc($xs-size))
+      margin-left: 8.33333333%
+    &-right
+      margin-right: 0
+      @media (min-width: sf-rem-calc($xs-size))
+        margin-right: 8.33333333%
