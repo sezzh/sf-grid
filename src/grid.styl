@@ -13,10 +13,12 @@ $gutter-size = sf-rem-calc($gutter-value)
 // Base Grid system
 // flex it's a shortcut for: flex- grow, shrink, basis
 .sf-grid
+
   // Grid default properties
   display: flex
   flex-flow: row wrap
 
+  // If you wanna use a grid without column drop you should use this option.
   &--fluid
     flex-flow: row nowrap
 
@@ -50,6 +52,8 @@ $gutter-size = sf-rem-calc($gutter-value)
     align-items: baseline
 
   // Grid cell configuration
+  // There are many different kind of cells they can be used all together.
+
 .sf-grid__cell
 
   // Default properties for a cell grid
@@ -183,7 +187,11 @@ $gutter-size = sf-rem-calc($gutter-value)
       @media (min-width: sf-rem-calc($xs-size))
         flex: 1 0 calc(8.33333333% - var(--sf-gutter-size))
 
-// Offset configuration
+
+// Offset configuration.
+// Offset is used to move a col value betweens columns you can choose  to add
+// Offset from the left or right size of column.
+//
 .sf-offset
   &-11
     margin-left: 0
