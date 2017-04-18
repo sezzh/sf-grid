@@ -1,0 +1,25 @@
+{
+  "name": "sf-grid",
+  "version": "1.0.0",
+  "description": "Another simple Grid based on Flexbox and Stylus",
+  "main": "src/styles.styl",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sezzh/sf-grid.git"
+  },
+  "keywords": [
+    "stylus",
+    "flexbox",
+    "grid",
+    "responsive"
+  ],
+  "author": "sezzh <sezzhltd@gmail.com> (https://sezzh.com)",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/sezzh/sf-grid/issues"
+  },
+  "homepage": "https://github.com/sezzh/sf-grid#readme"
+}
